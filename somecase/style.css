@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/*--------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------*/
+html {
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* 
+
+  LOGIN PAGE
+
+*/
+
+body {
+  position: relative;
+  background-color: #141414;
+}
+#site {
+  opacity: 1;
+  animation: appear 5s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#login {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  color: white;
+  position: absolute;
+}
+
+.login__title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login__password {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+input {
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#login__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__element {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+button {
+  border: none;
+  width: calc(100% - 40px);
+  height: 32px;
+  margin: 8px auto;
+  background-color: #a020f0;
+  color: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+#loading {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  color: #eee;
+  position: absolute;
+  font-size: 68px;
+  display: none;
+}
+
+i {
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+
+  SoMe Page
+
+*/
+
+#site {
+  height: 100vh;
+  width: 100vw;
+  background-color: #141414;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.container__text--sub-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 24px 0;
+  max-width: 1000px;
+  margin-left: 20px;
+}
+
+.courses__wrapper {
+  display: flex;
+  margin-left: 20px;
+}
+
+.course {
+  padding: 16px;
+  border: 1.5px solid #eee;
+  border-radius: 8px;
+  margin: 0 16px;
+  width: 800px;
+  margin-bottom: 64px;
+  overflow: hidden;
+  position: relative;
+}
+
+.course__title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.course__para {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2;
+  z-index: 2;
+  position: relative;
+}
+
+.link {
+  color: #eee;
+  background-color: #a020f0;
+  text-decoration: none;
+  padding: 10px 28px;
+  width: 10%;
+  text-align: center;
+  border-radius: 32px;
+  margin-left: 48px;
+}
+
+#cursor-effect {
+  position: absolute;
+  transform: translate(-15.625rem, -29.375rem);
+  width: 100px;
+  height: 100px;
+  background-color: #a020f0;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 0;
+}
